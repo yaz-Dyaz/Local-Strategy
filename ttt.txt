@@ -1,0 +1,87 @@
+{
+    "status": false,
+    "message": "success",
+    "data": [
+        {
+            "id": 1,
+            "role_id": 1,
+            "module_id": 1,
+            "is_read": true,
+            "is_write": true,
+            "createdAt": "2023-05-22T14:37:08.378Z",
+            "updatedAt": "2023-05-22T14:37:08.378Z"
+        },
+        {
+            "id": 2,
+            "role_id": 1,
+            "module_id": 2,
+            "is_read": true,
+            "is_write": true,
+            "createdAt": "2023-05-22T14:37:18.901Z",
+            "updatedAt": "2023-05-22T14:37:18.901Z"
+        },
+        {
+            "id": 3,
+            "role_id": 1,
+            "module_id": 3,
+            "is_read": true,
+            "is_write": true,
+            "createdAt": "2023-05-22T14:37:20.411Z",
+            "updatedAt": "2023-05-22T14:37:20.411Z"
+        },
+        {
+            "id": 4,
+            "role_id": 2,
+            "module_id": 1,
+            "is_read": true,
+            "is_write": false,
+            "createdAt": "2023-05-22T14:37:41.678Z",
+            "updatedAt": "2023-05-22T14:37:41.678Z"
+        },
+        {
+            "id": 5,
+            "role_id": 2,
+            "module_id": 2,
+            "is_read": true,
+            "is_write": true,
+            "createdAt": "2023-05-22T14:37:49.386Z",
+            "updatedAt": "2023-05-22T14:37:49.386Z"
+        },
+        {
+            "id": 6,
+            "role_id": 2,
+            "module_id": 3,
+            "is_read": true,
+            "is_write": true,
+            "createdAt": "2023-05-22T14:37:52.548Z",
+            "updatedAt": "2023-05-22T14:37:52.548Z"
+        },
+        {
+            "id": 7,
+            "role_id": 3,
+            "module_id": 3,
+            "is_read": false,
+            "is_write": false,
+            "createdAt": "2023-05-22T14:38:16.240Z",
+            "updatedAt": "2023-05-22T14:38:16.240Z"
+        },
+        {
+            "id": 8,
+            "role_id": 3,
+            "module_id": 1,
+            "is_read": false,
+            "is_write": false,
+            "createdAt": "2023-05-22T14:39:46.322Z",
+            "updatedAt": "2023-05-22T14:39:46.322Z"
+        },
+        {
+            "id": 9,
+            "role_id": 3,
+            "module_id": 2,
+            "is_read": true,
+            "is_write": false,
+            "createdAt": "2023-05-22T14:39:55.542Z",
+            "updatedAt": "2023-05-22T14:39:55.542Z"
+        }
+    ]
+}
