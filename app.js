@@ -5,10 +5,14 @@ const morgan = require('morgan');
 const router = require('./routes');
 const cors = require('cors');
 const Sentry = require('@sentry/node');
+const passport = require('./utils/passport');
+const session = require('express-session');
+const flash = require('express-flash');
 
 const {
     SENTRY_DSN,
-    ENVIRONMENT
+    ENVIRONMENT,
+    JWT_SECRET_KEY
 } = process.env;
 
 Sentry.init({
@@ -28,6 +32,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(morgan('dev'));
+
+app.use(session({
+    secret: JWT_SECRET_KEY,
+    resave:false,
+    saveUninitialized:false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
 app.set('view engine', 'ejs');
 
 app.use(router);
