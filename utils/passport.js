@@ -1,6 +1,7 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const { User } = require('../db/models')
+const bcrypt = require('bcrypt');
 
 async function authenticate(email, password, done) {
   try {
@@ -12,7 +13,6 @@ async function authenticate(email, password, done) {
     const passwordCorrect = await bcrypt.compare(password, user.password);
 
     if (!passwordCorrect) {
-      error.errors.password = 'password is not valid!'
       done(null, false, { message: 'password is not valid!' });
     }
   } catch (error) {
@@ -21,3 +21,15 @@ async function authenticate(email, password, done) {
 }
 
 passport.use(new LocalStrategy({ usernameField: 'email', passwordField: 'password' }, authenticate));
+
+// serialize   -> menyimpan sesi
+passport.serializeUser((user, done)=> {
+  return done(null, user.id);
+});
+
+// deserialize -> membaca sesi
+passport.deserializeUser(async (id, done) => {
+  return done(null, await User.findOne({where:{id}}));
+});
+
+module.exports = passport;
