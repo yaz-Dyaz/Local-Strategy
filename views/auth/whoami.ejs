@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Who Am I</title>
+    <title>Document</title>
   </head>
   <body>
-    <h3>Who Am I</h3>
-    <p>Name : <% user.name %></p>
-    <p>Email : <% user.email %></p>
-    <button><a href="/home">Home</a></button>
+    <h2>Bio :</h2>
+    <div>
+      <p>------------------------------</p>
+      <b>Nama : <%= user.name %></b>
+      <p>Email : <%= user.email %></p>
+    </div>
+
+    <p>------------------------------</p>
+    <button><a href="/">Home</a></button>
   </body>
 </html>

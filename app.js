@@ -30,13 +30,13 @@ app.use(Sentry.Handlers.tracingHandler());
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 app.use(session({
     secret: JWT_SECRET_KEY,
-    resave:false,
-    saveUninitialized:false
+    resave: false,
+    saveUninitialized: false
 }));
 app.use(passport.initialize());
 app.use(passport.session());
