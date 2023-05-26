@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Register page</title>
   </head>
-
   <body>
-    <h1>Register User</h1>
+    <h1>Register New User</h1>
 
     <form action="/auth/register" method="post">
       <div>
-        <label for="Name">Name</label>
-        <br />
-        <input type="text" name="name" id="Name" placeholder="Your Name" />
-        <br />
+        <label>Name</label><br />
+        <input type="text" name="name" placeholder="Your name" /><br />
         <% if (errors.name) { %>
         <span style="color: red"><%= errors.name %></span>
         <% } %>
-        <br />
-        <label for="Email">Email</label>
-        <br />
-        <input type="text" name="email" id="Email" placeholder="Your Email" />
-        <br />
-        <% if (errors.email) { %>
-        <span style="color: red"> <%= errors.email %> </span>
-        <% } %>
-        <br />
-        <label for="Password">Password</label>
-        <br />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Your Password"
-        />
-        <br />
-        <% if (errors.password) { %>
-        <span style="color: red"> <%= errors.password %> </span>
-        <% } %>
-        <br />
+      </div>
 
-        <input type="submit" value="submit" />
+      <br />
+
+      <div>
+        <label>Email</label>
+        <br />
+        <input type="text" name="email" placeholder="Your email" /><br />
+        <% if (errors.email) { %>
+        <span style="color: red"><%= errors.email %></span>
+        <% } %>
+      </div>
+
+      <br />
+
+      <div>
+        <label>Password</label>
+        <br />
+        <input type="password" name="password" placeholder="Your email" /><br />
+        <% if (errors.password) { %>
+        <span style="color: red"><%= errors.password %></span>
+        <% } %>
+      </div>
+
+      <br />
+
+      <div>
+        <input type="submit" />
       </div>
     </form>
   </body>

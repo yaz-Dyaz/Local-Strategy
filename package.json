@@ -1,5 +1,5 @@
 {
-  "name": "Passport",
+  "name": "Local-Strategy",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
